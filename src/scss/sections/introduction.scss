@@ -3,14 +3,26 @@
     min-height: 514px;
     max-height: 686px;
 
-    color: #fff;
+    padding: 74px 25px 50px;
 
     background-image: url('./src/img/landscape.jpg');
     background-repeat: no-repeat;
-    
+
     background-size: 460%;
     background-position-x: 62.7%;
     background-position-y: 22%;
+
+    * {
+        color: #fff;
+    }
+
+    @media(max-width: 425px) {
+
+        h1,
+        p {
+            padding-right: 80px;
+        }
+    }
 
     @media(min-width: 400px) {
         background-size: 432%;
@@ -22,14 +34,22 @@
         background-position-x: 61.1%;
     }
 
-    padding: 74px 25px 50px;
-
-    @media(max-width: 425px) {
+    @media(min-width: 426px) {
 
         h1,
         p {
-            padding-right: 80px;
+            max-width: 340px;
         }
+    }
+
+
+
+    @media(min-width: 768px) {
+        min-height: 435px;
+        max-height: 564px;
+
+        background-size: 180%;
+        background-position: 49% 15%;
     }
 
     h1 {
@@ -38,9 +58,6 @@
         font-weight: 600;
 
         margin: 110px 0 0;
-        padding-right: 100px;
-
-        // color: $color-orange;
     }
 
     p {
@@ -58,7 +75,7 @@
     }
 
     a:hover,
-    a:active{
+    a:active {
         background-color: $color-btn-active;
     }
 }

@@ -17,6 +17,7 @@
 
 * {
   font-family: "Work Sans", sans-serif;
+  color: #2D3E50;
   font-size: 16px;
   line-height: 30px;
 }
@@ -51,13 +52,21 @@ a {
   height: calc(100vh - 123px);
   min-height: 514px;
   max-height: 686px;
-  color: #fff;
+  padding: 74px 25px 50px;
   background-image: url("./src/img/landscape.jpg");
   background-repeat: no-repeat;
   background-size: 460%;
   background-position-x: 62.7%;
   background-position-y: 22%;
-  padding: 74px 25px 50px;
+}
+.introduction * {
+  color: #fff;
+}
+@media (max-width: 425px) {
+  .introduction h1,
+  .introduction p {
+    padding-right: 80px;
+  }
 }
 @media (min-width: 400px) {
   .introduction {
@@ -71,10 +80,18 @@ a {
     background-position-x: 61.1%;
   }
 }
-@media (max-width: 425px) {
+@media (min-width: 426px) {
   .introduction h1,
   .introduction p {
-    padding-right: 80px;
+    max-width: 340px;
+  }
+}
+@media (min-width: 768px) {
+  .introduction {
+    min-height: 435px;
+    max-height: 564px;
+    background-size: 180%;
+    background-position: 49% 15%;
   }
 }
 .introduction h1 {
@@ -82,7 +99,6 @@ a {
   line-height: 50px;
   font-weight: 600;
   margin: 110px 0 0;
-  padding-right: 100px;
 }
 .introduction p {
   margin: 18px 0 36px;
@@ -130,7 +146,7 @@ a {
 .education img {
   position: absolute;
   bottom: 0;
-  left: 16px;
+  right: 18px;
   width: 351px;
   margin: unset;
 }
@@ -138,25 +154,34 @@ a {
   .education img,
   .education .square1,
   .education .square2 {
-    transform: translateX(10px);
+    transform: translateX(-10px);
   }
 }
 @media (min-width: 425px) {
   .education img,
   .education .square1,
   .education .square2 {
-    transform: translateX(20px);
+    transform: translateX(-20px);
+  }
+}
+@media (min-width: 768px) {
+  .education h2,
+  .education p {
+    max-width: 50%;
+  }
+  .education p:nth-of-type(2) {
+    padding-bottom: 50px;
   }
 }
 .education .square1 {
   border-color: #0069F7;
   bottom: 225px;
-  left: 230px;
+  right: 42px;
 }
 .education .square2 {
   border-color: #F14B00;
   bottom: 165px;
-  left: 70px;
+  right: 264px;
 }
 
 .lesson-packs {
@@ -202,6 +227,11 @@ a {
   line-height: 32px;
   font-weight: 600;
   transform: translateY(-8px);
+}
+@media (min-width: 768px) {
+  .lesson-packs article .top-part h3 {
+    width: unset;
+  }
 }
 .lesson-packs article p {
   margin: 18px 0 0;
@@ -504,8 +534,14 @@ a {
   line-height: 32px;
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  .accomplishments > p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 480px;
+  }
+}
 .accomplishments strong {
-  color: #2D3E50;
   font-size: 20px;
   line-height: 32px;
   font-weight: 600;
@@ -691,6 +727,24 @@ a {
   top: -32px;
   right: 24px;
 }
+@media (min-width: 768px) {
+  .sign-up h2 {
+    padding-top: 30px;
+  }
+  .sign-up p {
+    padding-bottom: 220px;
+  }
+  .sign-up form {
+    width: 375px;
+    position: absolute;
+    top: 50px;
+    right: 25px;
+  }
+  .sign-up .square1 {
+    top: -19px;
+    left: -18px;
+  }
+}
 
 footer {
   padding: 50px 0 74px;
@@ -731,4 +785,12 @@ footer .right-part a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 768px) {
+  footer {
+    justify-content: start;
+    gap: 15px;
+    background-color: unset;
+    padding-bottom: 425px;
+  }
 }

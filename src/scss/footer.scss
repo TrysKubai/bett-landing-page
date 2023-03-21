@@ -14,26 +14,27 @@ footer {
         padding: 10px 0;
     }
 
-    .left-part {  
-        padding-left: 25px;      
+    .left-part {
+        padding-left: 25px;
+
         h2 {
             margin: unset;
-            
+
             font-size: 30px;
             line-height: 35px;
             font-weight: 600;
         }
-        
+
         .contacts {
             display: flex;
             gap: 30px;
         }
     }
-    
+
     .line {
         border: solid 1px $color-gray-light;
     }
-    
+
     .right-part {
         padding-right: 60px;
 
@@ -46,5 +47,12 @@ footer {
             justify-content: center;
             align-items: center;
         }
+    }
+
+    @media(min-width: 768px) {
+        justify-content: start;
+        gap: 15px;
+        background-color: unset;
+        padding-bottom: 425px;
     }
 }
