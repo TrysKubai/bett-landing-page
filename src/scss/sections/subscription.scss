@@ -220,20 +220,40 @@
         }
     }
 
-    >img {
+    .img-container {
         position: absolute;
 
         bottom: 0;
-        left: 50%;
 
-        transform: translate(-50%, 465px) scale(0.275);
+        overflow: hidden;
+        width: calc(100%);
+        height: 250px;
+        bottom: 0;
 
-        @media(min-width: 400px) {
-            transform: translate(-50%, 470px) scale(0.295);
+        transform: scale(1.77);
+
+
+        img {
+            position: absolute;
+            width: 100%;
+
+            @media(min-width: 400px) {
+                bottom: 30px;
+            }
+
+            @media(min-width: 425px) {
+                bottom: 25px;
+            }
+
         }
 
-        @media(min-width: 425px) {
-            transform: translate(-50%, 475px) scale(0.315);
+        @media(min-width: 768px) {
+            height: 290px;
+            transform: scale(1.3);
+
+            img {
+                bottom: -55px;
+            }
         }
     }
 
