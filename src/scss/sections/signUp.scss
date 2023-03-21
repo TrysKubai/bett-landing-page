@@ -1,0 +1,224 @@
+.sign-up {
+    position: relative;
+    z-index: 1;
+
+    background-color: $color-blue-light;
+
+    padding: 40px 0 0;
+
+    h2 {
+        margin: unset;
+        padding: 0 25px;
+
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 600;
+    }
+
+    p {
+        padding: 5px 25px 25px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    form {
+        position: relative;
+
+        padding: 30px 25px;
+        background-color: #fff;
+
+        box-shadow: $shadow;
+
+        h4 {
+            margin: unset;
+            font-weight: 500;
+
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+        }
+
+        .required::after {
+            position: absolute;
+
+            content: '*';
+            transform: translateX(5px);
+        }
+
+        .in-row {
+            display: inline-block;
+            margin: 0 30px 10px 0;
+        }
+
+        input {
+            border: solid 1px $color-gray;
+            outline: unset;
+
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=number] {
+            width: calc(100% - 52px);
+            height: 48px;
+
+            padding: 0 25px;
+            margin: 0 0 20px;
+
+            &:-webkit-autofill {
+                -webkit-background-clip: text;
+            }
+
+            &:focus {
+                border-color: $color-orange;
+            }
+        }
+
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input[type=radio],
+        input[type=checkbox] {
+            position: relative;
+
+            width: 14px;
+            height: 14px;
+
+            transform: translateY(2px);
+
+            margin: unset;
+            appearance: none;
+            background-color: unset;
+
+            &:checked {
+                border-color: $color-orange;
+            }
+        }
+
+        input[type=radio] {
+            border-radius: 50%;
+        }
+
+        input[type=radio]:checked {
+            background-color: $color-orange;
+            box-shadow: inset 0 0 0 2.5px #fff;
+        }
+
+        input[type=checkbox]:checked {
+            &:after {
+                position: absolute;
+
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+
+                content: url('./src/img/check-mark-small.svg');
+            }
+        }
+
+        label[for=internet] {
+            margin-bottom: 10px;
+        }
+
+        label[for=agree] {
+            display: flex;
+            align-items: start;
+
+            input {
+                flex-shrink: 0;
+
+                // margin: unset;
+                transform: translateY(8px);
+            }
+
+            span {
+                padding: 0 0 0 16px;
+            }
+        }
+
+        i {
+            display: block;
+            padding: 10px 28px 20px;
+        }
+
+        button {
+            padding: 14px 0 13px;
+            width: 100%;
+
+            background-color: $color-btn-main;
+            color: #fff;
+
+            text-align: center;
+            font-weight: 700;
+        }
+
+        button:hover,
+        button:active {
+            background-color: $color-btn-active;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .success {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: #fff;
+
+            .container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+
+                width: 300px;
+                text-align: center;
+
+                .icon {
+                    margin: auto;
+                    width: 61px;
+                    height: 61px;
+
+                    background-color: $color-orange;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                h3 {
+                    font-size: 30px;
+                    line-height: 40px;
+                    font-weight: 600;
+
+                    color: $color-orange;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+
+    .square1 {
+        z-index: -1;
+        @extend %square-s;
+        border-color: $color-blue;
+        top: -32px;
+        right: 24px;
+    }
+}

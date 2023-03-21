@@ -1,0 +1,64 @@
+.introduction {
+    height: calc(100vh - 123px);
+    min-height: 514px;
+    max-height: 686px;
+
+    color: #fff;
+
+    background-image: url('./src/img/landscape.jpg');
+    background-repeat: no-repeat;
+    
+    background-size: 460%;
+    background-position-x: 62.7%;
+    background-position-y: 22%;
+
+    @media(min-width: 400px) {
+        background-size: 432%;
+        background-position-x: 62%;
+    }
+
+    @media(min-width: 425px) {
+        background-size: 406%;
+        background-position-x: 61.1%;
+    }
+
+    padding: 74px 25px 50px;
+
+    @media(max-width: 425px) {
+
+        h1,
+        p {
+            padding-right: 80px;
+        }
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 600;
+
+        margin: 110px 0 0;
+        padding-right: 100px;
+
+        // color: $color-orange;
+    }
+
+    p {
+        margin: 18px 0 36px;
+    }
+
+    a {
+        display: inline-block;
+        padding: 14px 40px 13px;
+        min-width: 120px;
+        font-weight: 700;
+        text-align: center;
+
+        background-color: $color-btn-main;
+    }
+
+    a:hover,
+    a:active{
+        background-color: $color-btn-active;
+    }
+}

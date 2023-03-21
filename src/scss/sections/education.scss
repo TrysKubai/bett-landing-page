@@ -1,0 +1,75 @@
+.education {
+    background-color: $color-blue-light;
+
+    padding: 50px 25px 0;
+
+    position: relative;
+    overflow: hidden;
+
+    h2 {
+        margin: 0;
+        padding-right: 25px;
+
+        span:nth-of-type(1) {
+            color: $color-orange;
+        }
+
+        span {
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 600;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 35px;
+        margin: 18px 0 24px;
+    }
+
+    p:nth-of-type(2) {
+        margin: unset;
+        padding-bottom: 360px;
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+
+        width: 351px;
+        margin: unset;
+    }
+
+    @media(min-width: 400px) {
+
+        img,
+        .square1,
+        .square2 {
+            transform: translateX(10px);
+        }
+    }
+
+    @media(min-width: 425px) {
+
+        img,
+        .square1,
+        .square2 {
+            transform: translateX(20px);
+        }
+    }
+
+    .square1 {
+        @extend %square-l;
+        border-color: $color-blue;
+        bottom: 225px;
+        left: 230px;
+    }
+
+    .square2 {
+        @extend %square-s;
+        border-color: $color-orange;
+        bottom: 165px;
+        left: 70px;
+    }
+}

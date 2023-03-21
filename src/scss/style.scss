@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+$color-orange: #F14B00;
+$color-blue: #0069F7;
+$color-blue-light: #EBF3FF;
+$color-green: #00AE8D;
+$color-gray: #959595;
+$color-gray-light: #CACACA;
+$color-gray-dark: #2D3E50;
+
+$color-btn-main: $color-orange;
+$color-btn-active: #C13C00;
+$color-btn-disabled: #B5B9BC;
+
+$shadow: 0 0 15px rgba(0, 0, 0, 0.18);
+
+%square-s {
+    position: absolute;
+    border-style: solid;
+    border-width: 9px;
+    width: 33px;
+    height: 33px;
+}
+
+%square-m {
+    position: absolute;
+    border-style: solid;
+    border-width: 13px;
+    width: 42px;
+    height: 42px;
+}
+
+%square-l {
+    position: absolute;
+    border-style: solid;
+    border-width: 21px;
+    width: 69px;
+    height: 69px;
+}
+
+* {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+a,
+button {
+    all: unset;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+label,
+button {
+    display: block;
+}
+
+input[type=radio],
+input[type=checkbox],
+label,
+button,
+a {
+    cursor: pointer;
+}
+
+@import './sections/introduction.scss';
+@import './sections/education.scss';
+@import './sections/lessonPacks.scss';
+@import './sections/subscription.scss';
+@import './sections/accomplishments.scss';
+@import './sections/signUp.scss';
+
+@import './footer.scss';

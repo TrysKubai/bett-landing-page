@@ -1,0 +1,124 @@
+.lesson-packs {
+    padding: 50px 0 27px;
+
+    h2 {
+        margin: unset;
+        padding: 0 25px;
+
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 600;
+    }
+
+    >p {
+        padding: 0 25px;
+        margin: 18px 0 36px;
+
+        font-size: 18px;
+        line-height: 35px;
+    }
+
+    article {
+        width: calc(100% - 100px);
+        margin: 0 auto 23px;
+
+        padding: 22px 25px;
+
+        box-shadow: $shadow;
+
+        .top-part {
+            display: flex;
+            gap: 16px;
+
+            .icon {
+                width: 104px;
+                height: 104px;
+
+                background-color: $color-orange;
+
+                display: grid;
+                justify-content: center;
+
+                img {
+                    margin: auto;
+                }
+            }
+
+            h3 {
+                width: 200px;
+                margin: unset;
+
+                font-size: 20px;
+                line-height: 32px;
+                font-weight: 600;
+
+                transform: translateY(-8px);
+            }
+        }
+
+        p {
+            margin: 18px 0 0;
+
+            font-weight: 500;
+            color: $color-orange;
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show-btn {
+        display: flex;
+    }
+
+    button {
+        display: none;
+
+        position: relative;
+        width: calc(100% - 54px);
+
+        border: solid 2px $color-btn-main;
+
+        margin: 0 auto 23px;
+        padding: 16px 0 15px;
+
+        justify-content: center;
+
+        span {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $color-btn-main;
+
+            transform: translateX(-13px);
+
+            &::after {
+                position: absolute;
+                transform: translateX(9px);
+
+                width: 16px;
+                height: 24px;
+
+                content: '';
+                -webkit-mask: url('./src/img/arrow-down.svg');
+                mask: url('./src/img/arrow-down.svg');
+
+                background-color: $color-btn-main;
+            }
+        }
+    }
+
+    button:hover,
+    button:active {
+        border-color: $color-btn-active;
+
+        span {
+            color: $color-btn-active;
+
+            &::after {
+                background-color: $color-btn-active;
+            }
+        }
+    }
+}

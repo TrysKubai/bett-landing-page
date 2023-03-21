@@ -1,0 +1,50 @@
+footer {
+    padding: 50px 0 74px;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $color-blue-light;
+
+    .left-part,
+    .right-part {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    .left-part {  
+        padding-left: 25px;      
+        h2 {
+            margin: unset;
+            
+            font-size: 30px;
+            line-height: 35px;
+            font-weight: 600;
+        }
+        
+        .contacts {
+            display: flex;
+            gap: 30px;
+        }
+    }
+    
+    .line {
+        border: solid 1px $color-gray-light;
+    }
+    
+    .right-part {
+        padding-right: 60px;
+
+        a {
+            width: 28px;
+            height: 28px;
+            border: solid 2px $color-orange;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
