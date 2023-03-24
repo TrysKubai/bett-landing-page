@@ -11,50 +11,57 @@
         font-weight: 600;
     }
 
-    article {
+    &-list {
         position: relative;
-        background-color: #fff;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        article {
+            position: relative;
+            background-color: #fff;
 
-        margin: 0 auto 28px;
-        padding: 10px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-        width: calc(100% - 100px);
-        min-height: 234px;
-        box-shadow: $shadow;
+            margin: 0 auto 28px;
+            padding: 10px 25px;
 
-        img {
-            margin-bottom: 18px;
-        }
+            width: calc(100% - 100px);
+            min-height: 240px;
+            box-shadow: $shadow;
 
-        h3 {
-            margin: 22px 0 14px;
+            img {
+                margin-bottom: 18px;
+            }
 
-            font-size: 60px;
-            line-height: 70px;
-            font-weight: 600;
-            color: $color-orange;
+            h3 {
+                margin: 22px 0 14px;
 
-        }
+                font-size: 60px;
+                line-height: 70px;
+                font-weight: 600;
+                color: $color-orange;
 
-        .line-orange {
-            width: 183px;
-            border: solid 1px $color-orange;
-        }
+            }
 
-        p {
-            text-align: center;
-        }
+            .line-orange {
+                width: 183px;
+                border: solid 1px $color-orange;
+            }
 
-        &:nth-of-type(2) p {
-            padding: 0 25px;
-        }
+            p {
+                text-align: center;
+            }
 
-        &:nth-of-type(3) p {
-            padding: 0 25px;
+            @media(max-width: 425px) {
+                &:nth-of-type(2) p {
+                    padding: 0 25px;
+                }
+
+                &:nth-of-type(3) p {
+                    padding: 0 25px;
+                }
+            }
         }
     }
 
@@ -91,7 +98,7 @@
     .square1 {
         z-index: -1;
 
-        @extend %square-l;
+        @include square-l;
         border-color: $color-blue;
 
         top: -45px;
@@ -101,10 +108,96 @@
     .square2 {
         z-index: -1;
 
-        @extend %square-l;
+        @include square-l;
         border-color: $color-blue-light;
 
-        top: -79px;
-        left: -56px;
+        left: -34px;
+        bottom: 220px;
+    }
+
+    @media(min-width: 1024px) {
+        padding: 70px 100px;
+
+        h2 {
+            padding: 0 0 50px;
+
+            font-size: 35px;
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(3, calc((100vw - 260px) / 3));
+            gap: 30px;
+
+            article {
+                margin: unset;
+                width: calc(100% - 50px);
+
+                img {
+                    width: 100%;
+                    max-width: 250px;
+                }
+            }
+        }
+
+        .line-gray {
+            margin-top: 75px;
+            width: calc(100% - 2px);
+        }
+
+        >p {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: unset;
+            padding: unset;
+
+            max-width: 660px;
+
+
+            font-size: 26px;
+            line-height: 40px;
+
+            strong {
+                font-size: 26px;
+                line-height: 40px;
+            }
+        }
+
+        .square1 {
+
+            top: -41px;
+            right: -44px;
+        }
+
+        .square2 {
+            @include square-m;
+            border-color: $color-orange;
+
+            left: -33px;
+            bottom: -27px;
+        }
+    }
+
+    @media(min-width: 1240px) {
+        &-list {
+            grid-template-columns: repeat(3, calc((100vw - 280px) / 3));
+            gap: 40px;
+        }
+
+    }
+
+    @media(min-width: 1440px) {
+        padding-left: 200px;
+        padding-right: 200px;
+
+        &-list {
+            grid-template-columns: repeat(3, calc((100vw - 480px) / 3));
+        }
+    }
+
+    @media(min-width: 1920px) {
+        &-list {
+            grid-template-columns: repeat(3, 480px);
+        }
     }
 }

@@ -55,4 +55,32 @@ footer {
         background-color: unset;
         padding-bottom: 425px;
     }
+
+    @media(min-width: 1024px) {
+        padding: 90px 100px 465px;
+
+        gap: 30px;
+
+        .left-part{
+            gap: 30px;
+        }
+
+        .left-part,
+        .right-part {
+            padding: unset;
+            padding: 5px 0;
+        }
+
+        .right-part{
+            justify-content: center;
+        }
+    }
+
+    @media(min-width: 1240px) {
+        gap: 40px;
+    }
+
+    @media(min-width: 1440px) {
+        padding-left: 200px;
+    }
 }

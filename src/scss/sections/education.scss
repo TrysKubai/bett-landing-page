@@ -41,7 +41,22 @@
         margin: unset;
     }
 
+    .square1 {
+        @include square-l;
+        border-color: $color-blue;
+        bottom: 225px;
+        right: 42px;
+    }
+
+    .square2 {
+        @include square-s;
+        border-color: $color-orange;
+        bottom: 165px;
+        right: 264px;
+    }
+
     @media(min-width: 400px) {
+        min-height: 320px;
 
         img,
         .square1,
@@ -67,21 +82,61 @@
         }
 
         p:nth-of-type(2) {
-            padding-bottom: 50px;
+            padding-bottom: 0;
+        }
+
+        padding-bottom: 50px;
+    }
+
+    @media(min-width: 1024px) {
+        padding: 90px 100px 65px;
+
+        h2 {
+            max-width: 460px;
+
+            span {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+        }
+
+        p {
+            max-width: 440px;
+        }
+
+        img {
+            width: 465px;
+            transform: translateX(-20px);
+        }
+
+        .square1 {
+            bottom: 340px;
+            transform: translateX(-62px);
+
+        }
+
+        .square2 {
+            @include square-m;
+            bottom: 220px;
+            transform: translateX(-84px);
         }
     }
 
-    .square1 {
-        @extend %square-l;
-        border-color: $color-blue;
-        bottom: 225px;
-        right: 42px;
-    }
+    @media(min-width: 1440px) {
+        padding-left: 200px;
 
-    .square2 {
-        @extend %square-s;
-        border-color: $color-orange;
-        bottom: 165px;
-        right: 264px;
+        img {
+            transform: translateX(-180px);
+        }
+
+        .square1 {
+            transform: translateX(-222px);
+
+        }
+
+        .square2 {
+            transform: translateX(-246px);
+        }
     }
 }

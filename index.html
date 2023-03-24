@@ -35,60 +35,65 @@
         <section class="lesson-packs">
             <h2>Game-Based Lesson Packs</h2>
             <p>Our game-based lesson packs provide not only knowledge, but also teach soft skills.</p>
-            <article>
-                <div class="top-part">
-                    <div class="icon">
-                        <img src="./src/img/planet.svg" alt="planet icon">
+
+            <div class="lesson-packs-list">
+                <div class="square1"></div>
+                <div class="square2"></div>
+                <article>
+                    <div class="top-part">
+                        <div class="icon">
+                            <img src="./src/img/planet.svg" alt="planet icon">
+                        </div>
+                        <h3>Science and Social Studies</h3>
                     </div>
-                    <h3>Science and Social Studies</h3>
-                </div>
-                <p>History, mathematics, economics, geography, biology, etc.</p>
-            </article>
-            <article>
-                <div class="top-part">
-                    <div class="icon">
-                        <img src="./src/img/people.svg" alt="people icon">
+                    <p>History, mathematics, economics, geography, biology, etc.</p>
+                </article>
+                <article>
+                    <div class="top-part">
+                        <div class="icon">
+                            <img src="./src/img/people.svg" alt="people icon">
+                        </div>
+                        <h3>Civic Education</h3>
                     </div>
-                    <h3>Civic Education</h3>
-                </div>
-                <p>Partners the British Council Lithuania</p>
-            </article>
-            <article>
-                <div class="top-part">
-                    <div class="icon">
-                        <img src="./src/img/globe.svg" alt="globe icon">
+                    <p>Partners the British Council Lithuania</p>
+                </article>
+                <article>
+                    <div class="top-part">
+                        <div class="icon">
+                            <img src="./src/img/globe.svg" alt="globe icon">
+                        </div>
+                        <h3>Climate Change</h3>
                     </div>
-                    <h3>Climate Change</h3>
-                </div>
-                <p>Partners SKEWB Climate</p>
-            </article>
-            <article class="coming-soon hide">
-                <div class="top-part">
-                    <div class="icon">
-                        <img src="./src/img/piggy-bank.svg" alt="piggy-bank icon">
+                    <p>Partners SKEWB Climate</p>
+                </article>
+                <article class="coming-soon hide">
+                    <div class="top-part">
+                        <div class="icon">
+                            <img src="./src/img/piggy-bank.svg" alt="piggy-bank icon">
+                        </div>
+                        <h3>Financial Literacy</h3>
                     </div>
-                    <h3>Financial Literacy</h3>
-                </div>
-                <p>Coming soon!</p>
-            </article>
-            <article class="coming-soon hide">
-                <div class="top-part">
-                    <div class="icon">
-                        <img src="./src/img/media.svg" alt="media icon">
+                    <p>Coming soon!</p>
+                </article>
+                <article class="coming-soon hide">
+                    <div class="top-part">
+                        <div class="icon">
+                            <img src="./src/img/media.svg" alt="media icon">
+                        </div>
+                        <h3>Media Literacy</h3>
                     </div>
-                    <h3>Media Literacy</h3>
-                </div>
-                <p>Coming soon!</p>
-            </article>
-            <article class="coming-soon hide">
-                <div class="top-part">
-                    <div class="icon">
-                        <img src="./src/img/shield.svg" alt="shield icon">
+                    <p>Coming soon!</p>
+                </article>
+                <article class="coming-soon hide">
+                    <div class="top-part">
+                        <div class="icon">
+                            <img src="./src/img/shield.svg" alt="shield icon">
+                        </div>
+                        <h3>Internet Safety</h3>
                     </div>
-                    <h3>Internet Safety</h3>
-                </div>
-                <p>Coming soon!</p>
-            </article>
+                    <p>Coming soon!</p>
+                </article>
+            </div>
 
             <button id="show-lessons" class="show-btn" onclick="showLessons()"><span>See upcoming lessons
                     packs</span></button>
@@ -103,46 +108,48 @@
                 <span>for:</span>
             </h2>
 
-            <article>
+            <div class="subscription-list">
                 <div class="square1"></div>
-
-                <div class="top-part">
-                    <h3>Schools</h3>
-                    <img src="./src/img/school.svg" alt="school icon">
-                </div>
-                <ul id="sub-plan-1" class="sub-plan">
-                    <li><strong>Easy to adapt</strong> in the daily curriculum</li>
-                    <li>All of the game-based learning process <strong>is automated</strong> (teachers focus on helping
-                        students)</li>
-                    <li><strong>Motivating</strong> environment for children to learn</li>
-                </ul>
-                <button id="toggle-sub-plan-1" class="more" onclick="toggleSubPlan(1)"></button>
-            </article>
-            <article>
-                <div class="top-part">
-                    <h3>Parents</h3>
-                    <img src="./src/img/couple.svg" alt="couple icon">
-                </div>
-                <ul id="sub-plan-2" class="sub-plan">
-                    <li>Can see children&#39;s <strong>activity reports</strong></li>
-                    <li>Children can <strong>learn at their pace</strong></li>
-                    <li><strong>Motivating</strong> environment for children to learn</li>
-                </ul>
-                <button id="toggle-sub-plan-2" class="more" onclick="toggleSubPlan(2)"></button>
-            </article>
-            <article>
-                <div class="top-part">
-                    <h3>Businesses</h3>
-                    <img src="./src/img/light.svg" alt="light icon">
-                </div>
-                <ul id="sub-plan-3" class="sub-plan">
-                    <li><strong>A new approach</strong> for your brand</li>
-                    <li><strong>Reach youth</strong> with education tools they love</li>
-                    <li><strong>Innovative</strong> educational projects in virtual enivronments</li>
-                </ul>
-                <button id="toggle-sub-plan-3" class="more" onclick="toggleSubPlan(3)"></button>
+                <article>
+                    <div class="top-part">
+                        <h3>Schools</h3>
+                        <img src="./src/img/school.svg" alt="school icon">
+                    </div>
+                    <ul id="sub-plan-1" class="sub-plan">
+                        <li><strong>Easy to adapt</strong> in the daily curriculum</li>
+                        <li>All of the game-based learning process <strong>is automated</strong> (teachers focus on
+                            helping
+                            students)</li>
+                        <li><strong>Motivating</strong> environment for children to learn</li>
+                    </ul>
+                    <button id="toggle-sub-plan-1" class="toggle-sub-plan-btn more" onclick="toggleSubPlan(1)"></button>
+                </article>
+                <article>
+                    <div class="top-part">
+                        <h3>Parents</h3>
+                        <img src="./src/img/couple.svg" alt="couple icon">
+                    </div>
+                    <ul id="sub-plan-2" class="sub-plan">
+                        <li>Can see children&#39;s <strong>activity reports</strong></li>
+                        <li>Children can <strong>learn at their pace</strong></li>
+                        <li><strong>Motivating</strong> environment for children to learn</li>
+                    </ul>
+                    <button id="toggle-sub-plan-2" class="toggle-sub-plan-btn more" onclick="toggleSubPlan(2)"></button>
+                </article>
+                <article>
+                    <div class="top-part">
+                        <h3>Businesses</h3>
+                        <img src="./src/img/light.svg" alt="light icon">
+                    </div>
+                    <ul id="sub-plan-3" class="sub-plan">
+                        <li><strong>A new approach</strong> for your brand</li>
+                        <li><strong>Reach youth</strong> with education tools they love</li>
+                        <li><strong>Innovative</strong> educational projects in virtual enivronments</li>
+                    </ul>
+                    <button id="toggle-sub-plan-3" class="toggle-sub-plan-btn more" onclick="toggleSubPlan(3)"></button>
+                </article>
                 <div class="square2"></div>
-            </article>
+            </div>
 
             <script src="./src/js/toggleSubPlan.js"></script>
 
@@ -153,30 +160,34 @@
             <h3>
                 <span>The content of our game-based lessons can be translated into</span>
                 <span>different languages!</span>
+
                 <div class="square3"></div>
+                <div class="square4"></div>
             </h3>
         </section>
         <!-- Accomplishments -->
         <section class="accomplishments">
             <h2>Our Accomplishments</h2>
-            <article>
+            <div class="accomplishments-list">
+                <article>
+                    <img src="./src/img/wsa-winner-2020.png" alt="WSA european young innovators winner 2020">
+                    <div class="line-orange"></div>
+                    <p>In 2020, we were selected as one of the 16 best digital solutions in Europe in the international
+                        World Summit Awards</p>
+                </article>
+                <article>
+                    <h3>200+</h2>
+                        <div class="line-orange"></div>
+                        <p>Organizations have used and uses our programmes</p>
+                </article>
+                <article>
+                    <h3>30,000+</h2>
+                        <div class="line-orange"></div>
+                        <p>Children have gone through our learning platform</p>
+                </article>
                 <div class="square1"></div>
-                <img src="./src/img/wsa-winner-2020.png" alt="WSA european young innovators winner 2020">
-                <div class="line-orange"></div>
-                <p>In 2020, we were selected as one of the 16 best digital solutions in Europe in the international
-                    World Summit Awards</p>
-            </article>
-            <article>
-                <h3>200+</h2>
-                    <div class="line-orange"></div>
-                    <p>Organizations have used and uses our programmes</p>
-            </article>
-            <article>
                 <div class="square2"></div>
-                <h3>30,000+</h2>
-                    <div class="line-orange"></div>
-                    <p>Children have gone through our learning platform</p>
-            </article>
+            </div>
             <div class="line-gray"></div>
             <p>We have <strong>6+</strong> years in Lithuania&#39;s market and right now we are piloting in the U.K. and
                 U.S. markets.
@@ -188,77 +199,83 @@
             <p>Sign-up for a free lesson</p>
             <form action="#sign-up">
                 <div class="square1"></div>
-                <label for="name">
-                    <h4><span class="required">Name and Surname</span></h4>
-                    <input type="text" id="name" required>
-                </label>
+                <div class="top-part">
+                    <label for="name">
+                        <h4><span class="required">Name and Surname</span></h4>
+                        <input type="text" id="name" required>
+                    </label>
 
-                <h4><span class="required">You are</span></h4>
+                    <div class="status">
+                        <h4><span class="required">You are</span></h4>
+                        <label for="school">
+                            <input type="radio" name="status" id="school">
+                            School
+                        </label>
 
-                <label class="in-row" for="school">
-                    <input type="radio" name="status" id="school">
-                    School
-                </label>
+                        <label for="parent">
+                            <input type="radio" name="status" id="parent">
+                            Parent
+                        </label>
 
-                <label class="in-row" for="parent">
-                    <input type="radio" name="status" id="parent">
-                    Parent
-                </label>
+                        <label for="business">
+                            <input type="radio" name="status" id="business">
+                            Business
+                        </label>
+                    </div>
 
-                <label class="in-row" for="business">
-                    <input type="radio" name="status" id="business">
-                    Business
-                </label>
+                    <h4>
+                        <span class="required">Which lesson packs interest you?</span>
+                        <span>(More than one option is available)</span>
+                    </h4>
 
-                <h4>
-                    <span class="required">Which lesson packs interest you?</span>
-                    <span>(More than one option is available)</span>
-                </h4>
+                    <div class="select-lesson-packs">
+                        <label for="science">
+                            <input type="checkbox" id="science">
+                            Science and Social Studies
+                        </label>
 
-                <label for="science">
-                    <input type="checkbox" id="science">
-                    Science and Social Studies
-                </label>
+                        <label for="civic">
+                            <input type="checkbox" id="civic">
+                            Civic Education
+                        </label>
 
-                <label for="civic">
-                    <input type="checkbox" id="civic">
-                    Civic Education
-                </label>
+                        <label for="climate">
+                            <input type="checkbox" id="climate">
+                            Climate Change
+                        </label>
 
-                <label for="climate">
-                    <input type="checkbox" id="climate">
-                    Climate Change
-                </label>
+                        <label for="financial">
+                            <input type="checkbox" id="financial">
+                            Financial Literacy
+                        </label>
 
-                <label for="financial">
-                    <input type="checkbox" id="financial">
-                    Financial Literacy
-                </label>
+                        <label for="media">
+                            <input type="checkbox" id="media">
+                            Media Literacy
+                        </label>
 
-                <label for="media">
-                    <input type="checkbox" id="media">
-                    Media Literacy
-                </label>
+                        <label for="internet">
+                            <input type="checkbox" id="internet">
+                            Internet Safety
+                        </label>
+                    </div>
 
-                <label for="internet">
-                    <input type="checkbox" id="internet">
-                    Internet Safety
-                </label>
+                    <label for="email">
+                        <h4><span class="required">Email</span></h4>
+                        <input type="email" id="email" required>
+                    </label>
 
-                <label for="email">
-                    <h4><span class="required">Email</span></h4>
-                    <input type="email" id="email" required>
-                </label>
-
-                <label for="phone">
-                    <h4><span class="required">Phone number</span></h4>
-                    <input type="number" id="phone" required>
-                </label>
+                    <label for="phone">
+                        <h4><span class="required">Phone number</span></h4>
+                        <input type="number" id="phone" required>
+                    </label>
+                </div>
 
                 <label for="agree">
                     <input type="checkbox" id="agree">
                     <span>
-                        I agree to Privacy Policy. Consistent with our Privacy Policy, your e-mail can be used to send
+                        I agree to <a href="#" target="_blank">Privacy Policy</a>. Consistent with our Privacy Policy, your e-mail can
+                        be used to send
                         you marketing and account-related e-mails. &#42;
                     </span>
                 </label>

@@ -6,7 +6,7 @@ $color-blue-light: #EBF3FF;
 $color-green: #00AE8D;
 $color-gray: #959595;
 $color-gray-light: #CACACA;
-$color-gray-dark: #2D3E50;
+$color-gray-dark: #273F52;
 
 $color-btn-main: $color-orange;
 $color-btn-active: #C13C00;
@@ -14,7 +14,7 @@ $color-btn-disabled: #B5B9BC;
 
 $shadow: 0 0 15px rgba(0, 0, 0, 0.18);
 
-%square-s {
+@mixin square-s {
     position: absolute;
     border-style: solid;
     border-width: 9px;
@@ -22,7 +22,7 @@ $shadow: 0 0 15px rgba(0, 0, 0, 0.18);
     height: 33px;
 }
 
-%square-m {
+@mixin square-m {
     position: absolute;
     border-style: solid;
     border-width: 13px;
@@ -30,7 +30,7 @@ $shadow: 0 0 15px rgba(0, 0, 0, 0.18);
     height: 42px;
 }
 
-%square-l {
+@mixin square-l {
     position: absolute;
     border-style: solid;
     border-width: 21px;
@@ -69,6 +69,19 @@ label,
 button,
 a {
     cursor: pointer;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+
+    @media(min-width: 1920px) {
+        display: block;
+        width: 1920px;
+        margin: auto;
+        box-shadow: $shadow;
+
+    }
 }
 
 @import './sections/introduction.scss';

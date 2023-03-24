@@ -1,20 +1,50 @@
 const planListsDOM = document.querySelectorAll('.sub-plan');
+const buttonsDOM = document.querySelectorAll('.toggle-sub-plan-btn');
 
 // resets sub-plan-DOM height on window resize
 window.addEventListener('resize', () => {
-    for (let planList of planListsDOM) {
-        planList.style.height = 'auto';
-    }
-    setHeight();
-})
+    if (window.screen.width < 1240) {
+        for (let planList of planListsDOM) {
+            planList.classList.remove('hide');
+            planList.style.height = 'auto';
+
+            const height = planList.offsetHeight;
+
+            planList.style.height = height + 'px';
+        }
+    } else setHeightforDesktop();
+
+    addClassNames();
+});
 
 // setting height for trasnsitions to work
 function setHeight() {
+    if (window.screen.width < 1240) {
+        for (let planList of planListsDOM) {
+            planList.style.height = 'auto';
+
+            const height = planList.offsetHeight - 40;
+
+            planList.style.height = height + 'px';
+        }
+    } else setHeightforDesktop();
+}
+
+// setting list height for bigger width size
+// (need edit if conditions if text was chanched in one of the list to mach size)
+function setHeightforDesktop() {
     for (let planList of planListsDOM) {
-
-        const height = planList.offsetHeight - 40;
-
-        planList.style.height = height + 'px';
+        if (window.screen.width < 1495) {
+            planList.style.height = '276px';
+        } else if (window.screen.width < 1618) {
+            planList.style.height = '246px';
+        } else if (window.screen.width < 1796) {
+            planList.style.height = '216px';
+        } else if (window.screen.width < 1887) {
+            planList.style.height = '186px';
+        } else{
+            planList.style.height = '156px';
+        }
     }
 }
 
@@ -38,9 +68,29 @@ function toggleSubPlan(id) {
     }
 }
 
-setHeight();
+// setup class names by window width size
+function addClassNames() {
+    if (window.screen.width < 1240) {
+        for (let planList of planListsDOM) {
+            planList.classList.add('hide');
+        }
 
-for (let planList of planListsDOM) {
+        for (let button of buttonsDOM) {
+            button.classList.remove('less');
+            button.classList.add('more');
+        }
 
-    planList.classList.add('hide');
+    } else {
+        for (let planList of planListsDOM) {
+            planList.classList.remove('hide');
+        }
+
+        for (let button of buttonsDOM) {
+            button.classList.remove('more');
+            button.classList.add('less');
+        }
+    }
 }
+
+setHeight();
+addClassNames();
