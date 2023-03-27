@@ -1551,14 +1551,9 @@ footer .top-part .right-part a {
   align-items: center;
 }
 footer small {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0 25px;
-  font-size: 15px;
-}
-@media (min-width: 400px) {
-  footer {
-    font-size: 16px;
-  }
 }
 @media (min-width: 768px) {
   footer {
@@ -1570,7 +1565,6 @@ footer small {
     gap: 15px;
   }
   footer small {
-    display: flex;
     flex-direction: column;
   }
 }
