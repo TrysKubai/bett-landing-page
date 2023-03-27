@@ -46,7 +46,7 @@
             transform: translateX(5px);
         }
 
-        .status {
+        .status-list {
             display: flex;
             margin-bottom: 10px;
             gap: 30px;
@@ -326,10 +326,13 @@
                 }
 
                 .status {
-                    flex-direction: column;
-                    gap: unset;
                     order: 1;
                     margin-top: 8px;
+
+                    &-list {
+                        flex-direction: column;
+                        gap: unset;
+                    }
                 }
 
                 .select-lesson-packs {
