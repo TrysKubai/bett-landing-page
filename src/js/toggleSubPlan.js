@@ -2,19 +2,27 @@ const planListsDOM = document.querySelectorAll('.sub-plan');
 const buttonsDOM = document.querySelectorAll('.toggle-sub-plan-btn');
 
 // resets sub-plan-DOM height on window resize
+let lastScreenSize = window.screen.width
+
 window.addEventListener('resize', () => {
-    if (window.screen.width < 1240) {
-        for (let planList of planListsDOM) {
-            planList.classList.remove('hide');
-            planList.style.height = 'auto';
+    const currentScreenSize = window.screen.width;
+    const difference = Math.max(lastScreenSize, currentScreenSize) - Math.min(lastScreenSize, currentScreenSize);
 
-            const height = planList.offsetHeight;
+    if (difference) {
+        if (window.screen.width < 1240) {
+            for (let planList of planListsDOM) {
+                planList.classList.remove('hide');
+                planList.style.height = 'auto';
 
-            planList.style.height = height + 'px';
-        }
-    } else setHeightforDesktop();
+                const height = planList.offsetHeight;
 
-    addClassNames();
+                planList.style.height = height + 'px';
+            }
+        } else setHeightforDesktop();
+
+        addClassNames();
+        lastScreenSize = currentScreenSize;
+    }
 });
 
 // setting height for trasnsitions to work
@@ -42,7 +50,7 @@ function setHeightforDesktop() {
             planList.style.height = '216px';
         } else if (window.screen.width < 1887) {
             planList.style.height = '186px';
-        } else{
+        } else {
             planList.style.height = '156px';
         }
     }
