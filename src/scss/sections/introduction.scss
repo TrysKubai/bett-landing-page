@@ -1,0 +1,116 @@
+.introduction {
+    height: calc(100vh - 123px);
+    min-height: 514px;
+    max-height: 686px;
+
+    padding: 74px 25px 50px;
+
+    background-image: url('./src/img/landscape.jpg');
+    background-repeat: no-repeat;
+
+    background-size: 460%;
+    background-position-x: 62.7%;
+    background-position-y: 22%;
+
+    * {
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 600;
+
+        margin: 110px 0 0;
+    }
+
+    p {
+        margin: 18px 0 36px;
+    }
+
+    a {
+        display: inline-block;
+        padding: 14px 40px 13px;
+        min-width: 120px;
+        font-weight: 700;
+        text-align: center;
+
+        background-color: $color-btn-main;
+    }
+
+    a:hover,
+    a:active {
+        background-color: $color-btn-active;
+    }
+
+    @media(max-width: 425px) {
+
+        h1,
+        p {
+            padding-right: 80px;
+        }
+    }
+
+    @media(min-width: 400px) {
+        background-size: 432%;
+        background-position-x: 62%;
+    }
+
+    @media(min-width: 425px) {
+        background-size: 406%;
+        background-position-x: 61.1%;
+    }
+
+    @media(min-width: 426px) {
+
+        h1,
+        p {
+            max-width: 340px;
+        }
+    }
+
+    @media(min-width: 768px) {
+        min-height: 435px;
+        max-height: 564px;
+
+        background-size: 180%;
+        background-position: 49% 15%;
+    }
+
+    @media(min-width: 1024px) {
+        height: 466px;
+        background-size: 120%;
+        background-position: 0 0;
+
+        padding: 50px 100px 80px;
+    }
+
+    @media(min-width: 1208px) {
+        height: 416px;
+        background-size: 110%;
+        padding-bottom: 100px;
+    }
+
+    @media(min-width: 1324px) {
+        background-size: 105%;
+    }
+
+    @media(min-width: 1440px) {
+        min-height: 486px;
+        max-height: 660px;
+        height: calc(100vw - 954px);
+        background-size: 100%;
+
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: calc(1440px - 93vw);
+    }
+
+ @media(min-width: 1500px) {
+     padding-bottom: 60px;
+ }
+
+    @media(min-width: 1920px) {
+        background-size: 1920px;
+    }
+}

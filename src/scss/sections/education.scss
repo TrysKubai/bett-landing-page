@@ -1,0 +1,142 @@
+.education {
+    background-color: $color-blue-light;
+
+    padding: 50px 25px 0;
+
+    position: relative;
+    overflow: hidden;
+
+    h2 {
+        margin: 0;
+        padding-right: 25px;
+
+        span:nth-of-type(1) {
+            color: $color-orange;
+        }
+
+        span {
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 600;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 35px;
+        margin: 18px 0 24px;
+    }
+
+    p:nth-of-type(2) {
+        margin: unset;
+        padding-bottom: 360px;
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        right: 18px;
+
+        width: 351px;
+        margin: unset;
+    }
+
+    .square1 {
+        @include square-l;
+        border-color: $color-blue;
+        bottom: 225px;
+        right: 42px;
+    }
+
+    .square2 {
+        @include square-s;
+        border-color: $color-orange;
+        bottom: 165px;
+        right: 264px;
+    }
+
+    @media(min-width: 400px) {
+        min-height: 320px;
+
+        img,
+        .square1,
+        .square2 {
+            transform: translateX(-10px);
+        }
+    }
+
+    @media(min-width: 425px) {
+
+        img,
+        .square1,
+        .square2 {
+            transform: translateX(-20px);
+        }
+    }
+
+    @media(min-width: 768px) {
+
+        h2,
+        p {
+            max-width: 50%
+        }
+
+        p:nth-of-type(2) {
+            padding-bottom: 0;
+        }
+
+        padding-bottom: 50px;
+    }
+
+    @media(min-width: 1024px) {
+        padding: 90px 100px 65px;
+
+        h2 {
+            max-width: 460px;
+
+            span {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+        }
+
+        p {
+            max-width: 440px;
+        }
+
+        img {
+            width: 465px;
+            transform: translateX(-20px);
+        }
+
+        .square1 {
+            bottom: 340px;
+            transform: translateX(-62px);
+
+        }
+
+        .square2 {
+            @include square-m;
+            bottom: 220px;
+            transform: translateX(-84px);
+        }
+    }
+
+    @media(min-width: 1440px) {
+        padding-left: 200px;
+
+        img {
+            transform: translateX(-180px);
+        }
+
+        .square1 {
+            transform: translateX(-222px);
+
+        }
+
+        .square2 {
+            transform: translateX(-246px);
+        }
+    }
+}
