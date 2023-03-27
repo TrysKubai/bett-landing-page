@@ -54,13 +54,9 @@ footer {
     }
 
     small {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
         padding: 0 25px;
-        font-size: 15px;
-    }
-
-    @media(min-width: 400px) {
-        font-size: 16px;
     }
 
     @media(min-width: 768px) {
@@ -73,7 +69,6 @@ footer {
         }
 
         small {
-            display: flex;
             flex-direction: column;
         }
     }
