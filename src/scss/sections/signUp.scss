@@ -187,7 +187,8 @@
             border: solid 1px $color-red;
         }
 
-        .success {
+        .success,
+        .error {
             position: absolute;
 
             top: 0;
@@ -231,10 +232,16 @@
                 p {
                     font-size: 18px;
                     line-height: 32px;
+                    padding: unset;
                 }
             }
         }
 
+        .error {
+            .container {
+                width: 350px;
+            }
+        }
     }
 
     .square1 {

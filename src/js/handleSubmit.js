@@ -1,6 +1,7 @@
 const formDOM = document.querySelector('#sign-up-form');
 const notificationDOM = document.querySelector('#notification');
 const successDOM = document.querySelector('.success');
+const errorDOM = document.querySelector('.error');
 
 const nameTitleDOM = document.querySelector('#name-title');
 const nameInputDOM = document.querySelector('#name');
@@ -113,14 +114,23 @@ formDOM.addEventListener('submit', async e => {
         notificationDOM.textContent = null;
         buttonDOM.textContent = 'SUBMITTING...';
 
-
         const url = 'https://utility-server.komandax.lt/Survey/RequestSurveyData';
-        await fetch(url, {
+        const response = await fetch(url, {
             method: "POST",
+            headers: { 'Content-Type': 'application/json;charset=UTF-8' },
             body: JSON.stringify(data)
-        });
+        })
+
+        if (response.ok) {
+            successDOM.classList.remove('hide');
+        } else {
+            errorDOM.classList.remove('hide');
+
+            setTimeout(() => {
+                errorDOM.classList.add('hide');
+            }, '5000');
+        }
 
         buttonDOM.textContent = 'SUBMIT';
-        successDOM.classList.remove('hide');
     }
 });
