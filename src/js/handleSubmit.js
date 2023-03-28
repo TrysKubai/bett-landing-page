@@ -18,6 +18,8 @@ const phoneInputDOM = document.querySelector('#phone');
 
 const privacyPolicyDOM = document.querySelector('#privacy-policy');
 
+const buttonDOM = document.querySelector('#submit');
+
 const data = {
     Name: '',
     Ocupation: '',
@@ -109,12 +111,14 @@ formDOM.addEventListener('submit', async e => {
         notificationDOM.textContent = 'Please fill the required fields *';
     } else {
         notificationDOM.textContent = null;
+        buttonDOM.textContent = 'SUBMITTING...';
 
         await fetch(window.location.origin + '/Survey/RequestSurveyData', {
             method: "POST",
             body: JSON.stringify(data)
         });
 
+        buttonDOM.textContent = 'SUBMIT';
         successDOM.classList.remove('hide');
     }
 });
