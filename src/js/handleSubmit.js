@@ -119,7 +119,7 @@ formDOM.addEventListener('submit', async e => {
             method: "POST",
             headers: { 'Content-Type': 'application/json;charset=UTF-8' },
             body: JSON.stringify(data)
-        })
+        });
 
         if (response.ok) {
             successDOM.classList.remove('hide');
