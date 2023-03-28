@@ -176,6 +176,15 @@
 
         #notification {
             font-weight: 500;
+            color: $color-red;
+        }
+
+        .danger-text {
+            color: $color-red;
+        }
+
+        .danger-border {
+            border: solid 1px $color-red;
         }
 
         .success {
