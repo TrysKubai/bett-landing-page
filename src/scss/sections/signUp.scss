@@ -46,7 +46,7 @@
             transform: translateX(5px);
         }
 
-        .ocupation -list {
+        .ocupation-list {
             display: flex;
             margin-bottom: 10px;
             gap: 30px;
@@ -172,6 +172,10 @@
 
         .hide {
             display: none;
+        }
+
+        #notification {
+            font-weight: 500;
         }
 
         .success {

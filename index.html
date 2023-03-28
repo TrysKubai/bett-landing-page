@@ -197,29 +197,29 @@
         <section class="sign-up" id="sign-up">
             <h2>Let&#39;s connect!</h2>
             <p>Sign-up for a free lesson</p>
-            <form action="#sign-up">
+            <form id="sign-up-form">
                 <div class="square1"></div>
                 <div class="top-part">
                     <label for="name">
                         <h4><span class="required">Name and Surname</span></h4>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name">
                     </label>
 
-                    <div class="ocupation ">
+                    <div class="ocupation">
                         <h4><span class="required">You are</span></h4>
-                        <div class="ocupation -list">
+                        <div class="ocupation-list">
                             <label for="school">
-                                <input type="radio" name="ocupation " id="school">
+                                <input type="radio" name="ocupation" id="school">
                                 School
                             </label>
 
                             <label for="parent">
-                                <input type="radio" name="ocupation " id="parent">
+                                <input type="radio" name="ocupation" id="parent">
                                 Parent
                             </label>
 
                             <label for="business">
-                                <input type="radio" name="ocupation " id="business">
+                                <input type="radio" name="ocupation" id="business">
                                 Business
                             </label>
                         </div>
@@ -264,17 +264,17 @@
 
                     <label for="email">
                         <h4><span class="required">Email</span></h4>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email">
                     </label>
 
                     <label for="phone">
                         <h4><span class="required">Phone number</span></h4>
-                        <input type="number" id="phone" required>
+                        <input type="text" id="phone">
                     </label>
                 </div>
 
                 <label for="agree">
-                    <input type="checkbox" id="agree" required>
+                    <input type="checkbox" id="agree">
                     <span>
                         I agree to <a
                             href="https://sites.google.com/tryskubai.lt/threecubesglobalprivacypolicy/pagrindinis-puslapis"
@@ -287,6 +287,7 @@
 
                 <i>You can unsubscribe at any time.</i>
 
+                <div id="notification"></div>
                 <button>SUBMIT</button>
 
                 <div class="success hide">
@@ -297,6 +298,7 @@
                     </div>
                 </div>
             </form>
+            <script src="./src/js/handleSubmit.js"></script>
         </section>
     </main>
     <footer>
