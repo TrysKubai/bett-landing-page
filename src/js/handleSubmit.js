@@ -113,7 +113,9 @@ formDOM.addEventListener('submit', async e => {
         notificationDOM.textContent = null;
         buttonDOM.textContent = 'SUBMITTING...';
 
-        await fetch(window.location.origin + '/Survey/RequestSurveyData', {
+
+        const url = 'https://utility-server.komandax.lt/Survey/RequestSurveyData';
+        await fetch(url, {
             method: "POST",
             body: JSON.stringify(data)
         });
