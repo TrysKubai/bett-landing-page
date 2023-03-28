@@ -1364,6 +1364,13 @@ body {
 }
 .sign-up form #notification {
   font-weight: 500;
+  color: #FF0E0E;
+}
+.sign-up form .danger-text {
+  color: #FF0E0E;
+}
+.sign-up form .danger-border {
+  border: solid 1px #FF0E0E;
 }
 .sign-up form .success {
   position: absolute;
